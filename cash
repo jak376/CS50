@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(void)
+{
+    float money;
+    money = get_float("How much is your change? ");
+    int cents = round(money * 100);
+    // how to make below into a loop with less variables?
+    int i = (cents / 25);
+    int j = (cents % 25);
+    int k = (j / 10);
+    int l = (j % 10);
+    int m = (l / 5);
+    int n = (l % 5);
+    printf("%i\n", i + k + m + n);
+}
